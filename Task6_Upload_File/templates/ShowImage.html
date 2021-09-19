@@ -1,0 +1,25 @@
+  {% extends 'Homepage.html' %}
+  {% load crispy_forms_tags %}
+
+  {% block title %}
+    <title>Show Image</title>
+  {% endblock %}
+
+
+  {% block content %}
+
+
+            {% for i in img %}
+              <div class="container">
+                <div class="card" >
+                  <img src="{{i.Image.url}}" class="card-img-top" alt="..." width="{{500}}" height="{{700}}>
+                  <div class="card-body">
+                    <h5 class="card-title">{{i.City_Name}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  </div>
+                </div>  <br><br><br>
+               </div>
+            {% endfor %}
+
+  {% endblock %}
+
